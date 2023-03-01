@@ -40,7 +40,7 @@
                           <td>{{ $item->petugas->name }}</td>
                           <td>{{ $item->tahun_bayar  }}</td>
                           <td>{{ $item->bulan_bayar }}</td>
-                          <td>{{ $item->jumlah_bayar }}</td>
+                          <td>Rp. {{ number_format($item->jumlah_bayar) }}</td>
                           <td>
                               <a href="{{ route('pembayaran.delete', $item->id) }}"><i class="text-danger bx bx-trash me-1"></i> </a>
                           </td>

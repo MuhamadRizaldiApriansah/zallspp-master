@@ -35,7 +35,7 @@
                           <td>{{ $item->petugas->name }}</td>
                           <td>{{ $item->tahun_bayar  }}</td>
                           <td>{{ $item->bulan_bayar }}</td>
-                          <td>{{ $item->jumlah_bayar }}</td>
+                          <td>Rp. {{ number_format($item->jumlah_bayar) }}</td>
                         </tr>
                       @endforeach
                     </tbody>

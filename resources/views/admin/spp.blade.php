@@ -25,7 +25,7 @@
                         <tr>
                           <td>{{ $key +1 }}</td>
                           <td>{{ $item->tahun }}</td>
-                          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Rp. {{ $item->nominal }}</strong></td>
+                          <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>Rp. {{ number_format ($item->nominal )}}</strong></td>
                           <td>
                               <a  data-bs-toggle="modal" data-bs-target="#editModal{{ $item->id }}"><i class="text-primary bx bx-edit-alt me-1"></i></a>
                               <a href="{{ route('spp.delete', $item->id) }}"><i class="text-danger bx bx-trash me-1"></i> </a>

@@ -306,7 +306,7 @@
           <!-- Navbar -->
 
           <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
+            class="layout-navbar mb-3 container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
           >
             <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
@@ -315,9 +315,9 @@
               </a>
             </div>
 
-            <div class="navbar-nav-right d-flex align-items-center justify-content-center" id="navbar-collapse">
+            <div class="navbar-nav-right d-flex align-items-center justify-content-center mt-3" id="navbar-collapse">
               <!-- Search -->
-              <h1>SMK NEGERI 4 KOTA BOGOR</h1>
+              <h2>SMK NEGERI 4 KOTA BOGOR</h2>
               <!-- /Search -->
 
             </div>

@@ -6,7 +6,7 @@
       <div class="col-lg-12 mb-4 order-0">
         <div class="card">
             <div class="card-header">
-                <h5 class="float-start">SPP {{ $siswa->siswa->name }}</h5>
+                <h5 class="float-start">SPP {{ $siswa->name }}</h5>
                 <a href="" data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-success float-end">Tambah Pembayaran SPP</a>
             </div>
             <div class="card-body">
@@ -35,7 +35,7 @@
                           <td>{{ $item->siswa->kelas->kelas }}</td>
                           <td>{{ $item->tahun_bayar  }}</td>
                           <td>{{ $item->bulan_bayar }}</td>
-                          <td>{{ $item->jumlah_bayar }}</td>
+                          <td>Rp. {{ number_format($item->jumlah_bayar) }}</td>
                           <td>
                               <a href="{{ route('pembayaran.petugas.delete', $item->id) }}"><i class="text-danger bx bx-trash me-1"></i> </a>
                           </td>

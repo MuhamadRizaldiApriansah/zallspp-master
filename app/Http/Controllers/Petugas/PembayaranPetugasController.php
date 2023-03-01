@@ -13,7 +13,7 @@ use App\Models\User;
 use App\Models\Spp;
 use App\Models\Siswa;
 use Illuminate\Support\Facades\DB;
-use PDF;
+
 class PembayaranPetugasController extends Controller
 {
     /**
@@ -73,7 +73,7 @@ class PembayaranPetugasController extends Controller
         $pembayaran = Pembayaran::where('id_siswa', $siswa->id)->get();
         $spp = Spp::all();
 
-        return view('admin.detail_pembayaran', compact('pembayaran', 'spp', 'siswa'));
+        return view('petugas.detail_pembayaran', compact('pembayaran', 'spp', 'siswa'));
     }
 
     /**

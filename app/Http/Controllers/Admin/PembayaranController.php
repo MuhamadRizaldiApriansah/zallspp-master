@@ -54,18 +54,20 @@ class PembayaranController extends Controller
         return view('admin.detail_pembayaran', compact('pembayaran', 'spp', 'siswa'));
     }
 
-    public function cetak_pdf()
-    {
-    	$pem = Pembayaran::all();
- 
-    	$pdf = PDF::loadview('pem-pdf', compact('pem'));
-    	return $pdf->download('laporan-pem-pdf');
-    }
+  
 
     public function destroy($id)
     {
         Pembayaran::where('id', $id)->delete();
 
         return back();
+    }
+
+    public function cetak(Request $request, $id)
+    {
+        $data = Pembayaran::where('id_siswa', $id)->get();
+ 
+    	$pdf = PDF::loadview('pem-pdf', compact('data'));
+    	return $pdf->stream('laporan-pem-pdf');
     }
 }

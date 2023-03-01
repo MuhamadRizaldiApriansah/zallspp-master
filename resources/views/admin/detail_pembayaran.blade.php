@@ -7,8 +7,10 @@
         <div class="card">
             <div class="card-header">
                 <h5 class="float-start">SPP {{ $siswa->name }}</h5>
-                <a href="" data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-success float-end">Tambah Pembayaran SPP</a>
-                <a href="" class="btn btn-danger float-end">export pdf</a>
+                <div class="float-end">
+                  <a href="{{ route('cetak', $siswa->id) }}" class="btn btn-danger" target="_blank">Cetak PDF</a>
+                <a href="" data-bs-toggle="modal" data-bs-target="#tambahModal" class="btn btn-success ">Tambah Pembayaran SPP</a>
+                </div>
             </div>
             <div class="card-body">
                 <div class="table-responsive text-nowrap">

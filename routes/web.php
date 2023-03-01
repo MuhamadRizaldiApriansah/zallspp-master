@@ -69,6 +69,7 @@ Route::middleware('auth')->group(function () {
     Route::post('petugas/pembayaran/tambah/{id}', [PembayaranPetugasController::class, 'store'])->name('pembayaran.petugas.tambah');
     Route::get('petugas/pembayaran/delete/{id}', [PembayaranPetugasController::class, 'destroy'])->name('pembayaran.petugas.delete');
 
+    Route::get('/pembayaran/cetak_pdf{id}', [PembayaranController::class, 'cetak'])->name('cetak');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
